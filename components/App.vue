@@ -24,7 +24,7 @@
 import Header from "./Header/Header.vue";
 import Dashboard_titles from "./Dashboard_departures/Dashboard_titles.vue";
 import Dashboard_data from "./Dashboard_departures/Dashboard_data.vue";
-import Form from "./Form/Form.Vue";
+import Form from "./Form/Form.vue";
 export default {
   data() {
     return {

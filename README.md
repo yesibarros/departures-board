@@ -6,9 +6,9 @@ The present project builds a flights departure dashboard by consuming a flights 
 I really enjoyed developing this project, it was a very nice challenge to my frontend development skills, it allowed me to use Vue.JS V2 for the first time, and fall in love with it. This motivates me to keep growing as a developer, to keep on learning and continue doing this, which is something I really enjoy and ignites a fire in me.
 
 ## Pre-requisites
-1)Install Node.js
-2)Install Yarn (npm install --global yarn)
 
+1) Install Node.js
+2) Install Yarn (npm install --global yarn)
 
 ## Steps to run the project
 
