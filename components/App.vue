@@ -25,6 +25,8 @@ import Header from "./Header/Header.vue";
 import Dashboard_titles from "./Dashboard_departures/Dashboard_titles.vue";
 import Dashboard_data from "./Dashboard_departures/Dashboard_data.vue";
 import Form from "./Form/Form.vue";
+import getAllDepartures from "./Services/allDepartures";
+
 export default {
   data() {
     return {
@@ -41,21 +43,17 @@ export default {
     "form-status": Form,
   },
   methods: {
-    getProducts: function () {
-      fetch("https://6315ae3e5b85ba9b11e4cb85.mockapi.io/departures/Flightdata")
-        .then((response) => {
-          if (response.status !== 200) {
-            this.errorStatus = response.status;
-            this.errorMessage = response.statusText;
-          } else {
-            return response.json();
-          }
-        })
-        .then((json) => {
-          this.products = json.allDepartures;
-          this.dashboardLoaded = true;
-        });
+    getProducts: async function () {
+      const res = await getAllDepartures();
+      if (res.status !== 200) {
+        this.errorStatus = res.status;
+        this.errorMessage = res.message;
+      } else {
+        this.dashboardLoaded = true;
+        this.products = res.data.allDepartures;
+      }
     },
+
     handleSave(stateSubmit, flightSubmit) {
       let index = -1;
       const match = this.products.find((prod, i) => {
@@ -97,7 +95,6 @@ body {
 }
 .container-error {
   display: flex;
-  float: column;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -109,5 +106,6 @@ body {
 .error-text {
   color: red;
   text-shadow: 1px 1px grey;
+  margin-left: 4%;
 }
 </style>

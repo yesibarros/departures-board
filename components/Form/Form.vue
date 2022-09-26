@@ -19,13 +19,14 @@
           v-model="inputName"
           @change="changeTextStatus"
           v-if="dropState && stateChoose === 'Free text'"
-        /><div class="container-button">
-        <button class="save" type="submit">Save</button>
-      </div>
+        />
+        <div class="container-button">
+          <button class="save" type="submit">Save</button>
+        </div>
       </div>
     </form>
     <div class="error_label" v-if="showError">
-     <p>{{ messageError }}</p> 
+      <p>{{ messageError }}</p>
     </div>
   </div>
 </template>
@@ -102,14 +103,12 @@ export default {
   text-align: center;
   width: 20%;
   margin-top: 10%;
-
 }
 button {
   border-radius: 0px 5px 5px 0px;
   background: #f5d836;
   color: #ffffff;
   font-size: 2.5vh;
-
 }
 
 .input_container {

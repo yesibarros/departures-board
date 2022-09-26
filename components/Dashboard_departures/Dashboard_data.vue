@@ -64,7 +64,7 @@ export default {
 .item {
   flex: 1 1 0;
   text-align: left;
-    /* margin-right: 2%; */
+  /* margin-right: 2%; */
 }
 .container-data {
   margin-top: 2vh;
@@ -85,7 +85,6 @@ export default {
   font-size: 20px;
   font-weight: bold;
   color: white;
-
 }
 .text-yellow {
   font-size: 20px;
@@ -102,7 +101,6 @@ export default {
   align-items: center;
   height: 6vh;
   margin-left: 10%;
-
 }
 .Departed {
   background-color: green;
