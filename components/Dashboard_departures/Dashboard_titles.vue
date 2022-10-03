@@ -29,6 +29,7 @@ export default {
 * {
   box-sizing: border-box;
 }
+
 .item_titles {
   flex: 1 1 0;
   text-align: left;

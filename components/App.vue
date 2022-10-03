@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <!-- <div> -->
     <div class="container">
       <app-header />
       <div class="container-dash">
         <dashboard-titles />
         <dashboard-data :getproducts="products" v-if="!errorMessage" />
         <form-status
-          :getproducts="products"
+          :getproducts="products" 
           @saveStatus="handleSave"
           v-if="dashboardLoaded"
         />
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -60,7 +60,7 @@ export default {
         index = i;
         return prod.flightNumber === flightSubmit;
       });
-      if (match) {
+      if (match) { 
         match.status = stateSubmit;
         this.products.splice(index, 1, match);
       }
@@ -72,7 +72,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 body {
   padding: 0;
   margin: 0;

@@ -17,9 +17,9 @@
           placeholder="Write a new status"
           type="text"
           v-model="inputName"
-          @change="changeTextStatus"
           v-if="dropState && stateChoose === 'Free text'"
         />
+        <!-- @change="changeTextStatus"  this goes in line 20-->
         <div class="container-button">
           <button class="save" type="submit">Save</button>
         </div>
@@ -51,7 +51,9 @@ export default {
       default: [],
     },
   },
+  
   computed: {
+
     getFlightNumbers() {
       const flights = this.getproducts.map((product) => product.flightNumber);
       flights.unshift("");
@@ -76,9 +78,9 @@ export default {
         this.inputName = "";
       }
     },
-    changeTextStatus() {
-      this.inputName = event.target.value;
-    },
+    // changeTextStatus() {
+    //   this.inputName = event.target.value;
+    // },
     handleFlight(event) {
       this.dropState = true;
       this.flightChoose = event.target.value;

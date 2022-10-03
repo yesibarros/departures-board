@@ -7,6 +7,6 @@ import App from '../components/App.vue';
 
 export default {
     name: "IndexPage",
-    components: { App}
+    components: {App}
 }
 </script>

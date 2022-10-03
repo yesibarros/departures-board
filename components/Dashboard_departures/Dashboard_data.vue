@@ -27,9 +27,10 @@
         {{ product.departureGate ? product.departureGate.number : "" }}
       </p>
 
-      <div :class="product.status">
+      <div :class="product.status"> 
+       
         <div class="status-box">
-          <p>{{ product.status }}</p>
+          <p>{{ product.status }}</p> 
         </div>
       </div>
     </div>
@@ -53,6 +54,7 @@ export default {
   },
 
   watch: {
+    //observe
     getproducts(data) {
       this.products = data;
     },
@@ -64,7 +66,6 @@ export default {
 .item {
   flex: 1 1 0;
   text-align: left;
-  /* margin-right: 2%; */
 }
 .container-data {
   margin-top: 2vh;
